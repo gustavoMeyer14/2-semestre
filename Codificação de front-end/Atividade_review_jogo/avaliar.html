@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Review - Voxelreview</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <section id="topo">
+        <header class="navbar">
+            <div class="logo-container">
+                <img src="logo.png" alt="Logo" width="50" height="50" style="box-shadow: 0 8px 24px #002d52;">
+            </div>
+            <div class="header-conteudo">
+                <h1 class="site-titulo">Voxelreview - Review e Notícias</h1>
+                <nav class="menu">
+                    <a href="index.html">Voltar ao site</a>
+                    <a href="sobre.html">Sobre</a>
+                </nav>
+            </div>
+        </header>
+    </section>
+    
+    <h2 style="text-align: center;">Formulário de Avaliação de Jogos</h2>
+    
+    <form style="text-align: center;">
+        <div>
+            <label for="nome">Seu nome:</label><br>
+            <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required>
+        </div>
+        <br>
+
+        <div>
+            <label for="email">E-mail:</label><br>
+            <input type="email" id="email" name="email" placeholder="Digite seu e-mail" required>
+        </div>
+        <br>
+
+        <div>
+            <label for="jogo">Jogo a Avaliar: (apenas disponíveis no site)</label><br>
+            <select id="jogo" name="jogo" required>
+                <option value="" disabled selected style="background-color: #12121e;">Selecione um jogo</option>
+                <option value="Forza">Forza Horizon 6</option>
+            </select>
+        </div>
+        <br>
+        
+        <div class="container-avaliacao-texto">
+            <p class="titulo-avaliacao-texto"> 
+                Avalie o jogo:
+            </p>
+            <div class="opcoes-texto">
+                <input type="radio" id="nota5" name="avaliacao" value="5" />
+                <label for="nota5">Excelente (5)</label>
+
+                 <input type="radio" id="nota4" name="avaliacao" value="4" />
+                <label for="nota4">Muito bom (4)</label>
+
+                 <input type="radio" id="nota3" name="avaliacao" value="3" />
+                <label for="nota3">Regular (3)</label>
+
+                 <input type="radio" id="nota2" name="avaliacao" value="2" />
+                <label for="nota2">Ruim (2)</label>
+
+             <input type="radio" id="nota1" name="avaliacao" value="1" />
+                <label for="nota1">Péssimo (1)</label>
+            </div>
+        </div>
+
+        <style>
+            .container-avaliacao-texto{
+                font-family: sans-serif;
+                color: wheat;
+                padding: 10px;
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap:12px
+            }
+            .titulo-avaliacao-texto{
+                font-size: 16px;
+                font-weight: bold;
+                margin-bottom: 12px;
+            }
+
+            .opcoes-texto{
+                display: flex;
+                gap: 10px;
+            }
+            .opcoes-texto label{
+                display: flex;
+                flex-direction: column;
+                gap: 8px;
+                max-width: 200px;
+            }
+
+        .opcoes-texto input{
+            display: none !important;
+        }
+        .opcoes-texto label{
+            background-color: #222222;
+            border: 1px solid #444444;
+            padding: 10px;
+            border-radius: 4px;
+            font-size: 14px;
+            cursor: pointer;
+            text-align: center;
+            transition: all 0.2s ease;
+        }
+        .opcoes-texto label:hover{
+            background-color: #333333;
+            border-color: #ffcc00;
+        }
+        .opcoes-texto input:checked + label{
+            background-color: #ffcc00;
+            color: black;
+            border-color: #ffcc00;
+            font-weight: bold;
+        }
+        </style>
+        <br>
+
+        <div>
+            <label>Categorias de Interesse:</label><br>
+            <input type="checkbox" id="cat_acao" name="categorias" value="acao">
+            <label for="cat_acao">Ação</label><br>
+            <input type="checkbox" id="cat_rpg" name="categorias" value="rpg">
+            <label for="cat_rpg">RPG</label><br>
+            <input type="checkbox" id="cat_estrategia" name="categorias" value="estrategia">
+            <label for="cat_estrategia">Estratégia</label><br>
+            <input type="checkbox" id="cat_esportes" name="categorias" value="esportes">
+            <label for="cat_esportes">Esportes</label><br>
+            <input type="checkbox" id="cat_terror" name="categorias" value="terror">
+            <label for="cat_terror">Terror</label>
+        </div>
+        <br>
+
+        <div>
+            <label for="comentario">Comentário:</label><br>
+            <textarea id="comentario" name="comentario" rows="4" cols="40" placeholder="Escreva sua avaliação sobre o jogo..."></textarea>
+        </div>
+        <br>
+
+        <div>
+            <button type="submit" class="btn-enviar">Enviar</button>
+            <button type="reset" class="btn-limpar">Limpar</button>
+        </div>
+    </form>
+    <hr>
+    <footer>
+        <p>&copy Voxelreview 2026</p>
+        <p><a href="https://mail.google.com/mail" target="_blank">Endereço de email para contato</a></p>
+        <p><a href="#topo">Voltar ao topo</a></p>
+    </footer>
+</body>
+</html>

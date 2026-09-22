@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Painel de Encomendas</title>
+</head>
+<body>
+  <h1>Painel de Controle de Entregas</h1>
+  <p id="carregando">Carregando encomendas...</p>
+  <p id="erro" style="color: red; display: none;"></p>
+
+  <!-- Formulário Completo de Cadastro -->
+  <form id="form-encomenda" style="margin-bottom: 25px;">
+    <h3>Cadastrar Nova Encomenda</h3>
+    <input type="text" id="input-codigo" placeholder="Código (ex: BR004)" required>
+    <input type="text" id="input-cliente" placeholder="Nome do Cliente" required>
+    <select id="select-status">
+      <option value="PENDENTE">PENDENTE</option>
+      <option value="EM_TRANSITO">EM TRÂNSITO</option>
+      <option value="ENTREGUE">ENTREGUE</option>
+    </select>
+    <button type="submit">Cadastrar Encomenda</button>
+  </form>
+
+  <table id="tabela-encomendas" border="1" cellpadding="10" style="border-collapse: collapse; text-align: left;">
+    <thead>
+      <tr>
+        <th>Código</th>
+        <th>Cliente</th>
+        <th>Status</th>
+        <th>Ações</th> <!-- Nova coluna para os botões! -->
+      </tr>
+    </thead>
+    <tbody id="corpo-tabela"></tbody>
+  </table>
+
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Checkpoint de Consulta — BrasilAPI (CEP)</title>
+</head>
+<body>
+
+  <h2>Consulta de CEP</h2>
+
+  <div>
+    <input type="text" id="campoBusca" placeholder="Digite o CEP (ex: 89201000)" maxlength="8">
+    <button id="btnBuscar">Buscar</button>
+  </div>
+
+  <!-- Feedback de carregamento ou erro -->
+  <div id="status"></div>
+
+  <!-- Container onde o resultado será renderizado em lista -->
+  <div id="resultado"></div>
+
+  <script>
+    const campoBusca = document.getElementById('campoBusca');
+    const btnBuscar = document.getElementById('btnBuscar');
+    const statusDiv = document.getElementById('status');
+    const resultadoDiv = document.getElementById('resultado');
+
+    btnBuscar.addEventListener('click', consultarCEP);
+
+    // Dispara a busca ao pressionar Enter
+    campoBusca.addEventListener('keypress', (event) => {
+      if (event.key === 'Enter') consultarCEP();
+    });
+
+    // 1. Uso de fetch() dentro de uma função async, com await
+    async function consultarCEP() {
+      const cep = campoBusca.value.trim();
+
+      // Limpeza de buscas anteriores
+      resultadoDiv.innerHTML = '';
+      statusDiv.textContent = '';
+
+      if (!cep) {
+        statusDiv.textContent = 'Por favor, digite um CEP válido.';
+        return;
+      }
+
+      // 4. Feedback simples de carregamento
+      statusDiv.textContent = 'Carregando...';
+
+      try {
+        const response = await fetch(`https://brasilapi.com.br/api/cep/v1/${cep}`);
+
+        // 2. Verificação de response.ok
+        if (!response.ok) {
+          throw new Error('CEP não encontrado ou serviço indisponível.');
+        }
+
+        const dados = await response.json();
+
+        // Limpa a mensagem de carregamento
+        statusDiv.textContent = '';
+
+        // Renderiza os dados no formato de lista
+        renderizarResultado(dados);
+
+      } catch (error) {
+        // Feedback de erro
+        statusDiv.textContent = error.message;
+      }
+    }
+
+    // Função auxiliar para criar itens de lista com rótulo em negrito
+    function criarItemLista(rotulo, valor) {
+      const li = document.createElement('li');
+      const strong = document.createElement('strong');
+      strong.textContent = rotulo + ': ';
+      
+      li.appendChild(strong);
+      li.appendChild(document.createTextNode(valor));
+      return li;
+    }
+
+    // 3. Renderização no DOM usando createElement / textContent
+    function renderizarResultado(dados) {
+      const ul = document.createElement('ul');
+
+      ul.appendChild(criarItemLista('Logradouro', dados.street || 'Não informado'));
+      ul.appendChild(criarItemLista('Bairro', dados.neighborhood || 'Não informado'));
+      ul.appendChild(criarItemLista('Cidade/UF', `${dados.city} - ${dados.state}`));
+
+      resultadoDiv.appendChild(ul);
+    }
+  </script>
+
+</body>
+</html>

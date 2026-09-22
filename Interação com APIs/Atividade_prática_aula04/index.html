@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Painel de Encomendas</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="cabecalho">
+    <h1>Painel de Controle de Entregas</h1>
+    <p id="carregando">Carregando encomendas...</p>
+    <p id="erro" style="color: red; display: none;"></p>
+  </header>
+  <!-- Formulário Completo de Cadastro -->
+  <form id="form-encomenda">
+    <h3>Cadastrar Nova Encomenda</h3>
+    <input type="text" id="input-codigo" placeholder="Código (ex: GFM001)" required>
+    <input type="text" id="input-cliente" placeholder="Nome do Cliente" required>
+    <select id="select-status">
+      <option value="PENDENTE">⏳PENDENTE</option>
+      <option value="EM_TRANSITO">🚚EM TRÂNSITO</option>
+      <option value="ENTREGUE">📦ENTREGUE</option>
+    </select>
+    <button type="submit">Cadastrar Encomenda</button>
+  </form>
+  <p style="text-align: center;">*O pacote deve ter um código de ratreio com as iniciais <strong>"GFM"</strong> e o nome do cliente para ser validado.</p>
+  
+  <div id="painel-indicadores" class="painel-indicador">
+    <div class="card">✅Total: <span id="total-encomendas">0</span></div>
+    <div class="card">⏳Pendentes: <span id="total-pendente">0</span></div>
+    <div class="card">🚚Em trânsito: <span id="total-transito">0</span></div>
+    <div class="card">📦Entregues: <span id="total-entregue">0</span></div>
+  </div>
+  <!-- Tabela -->
+  <table id="tabela-encomendas">
+    <thead>
+      <tr>
+        <th>Código</th>
+        <th>Cliente</th>
+        <th>Status</th>
+        <th>Ações</th>
+      </tr>
+    </thead>
+    <tbody id="corpo-tabela"></tbody>
+  </table>
+
+  <script src="app.js"></script>
+</body>
+</html>

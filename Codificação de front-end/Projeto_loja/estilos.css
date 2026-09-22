@@ -1,0 +1,200 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #0d0d17; /*define a cor de fundo*/
+    color: #e6e6f0;
+    font-family: "Segoe UI", Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0 1.5rem 3rem;
+}
+
+hr {
+    border: none; /*remove borda*/
+    height: 1px;
+    background-color: #2a2a40; /*linha sutil, discreta no tema escuro*/
+    margin: 2rem 0;
+}
+
+
+h1, h2 {
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+h2 {
+    color:#00e5ff; /*azul neon: identidade da marca*/
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #1c1c2e;
+    padding-bottom: 0.4rem;
+}
+
+strong {
+    color: #b026ff; /*roxo neon com destaque*/
+}
+
+del {
+    color: #6f6f85;
+    font-weight: 400;
+}
+
+.site-header {
+    text-align: center;
+}
+
+.site-header h1 {
+    color: #ffffff;
+    font-size: 2.4rem;
+}
+
+.site-header em {
+    color: #9a9ab0;
+    font-style: normal;
+}
+
+nav ul {
+    list-style: none; /**remove as bolinhas padrão*/
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+nav ul li a {
+    color: #e6e6f0;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 0.4rem 0.2rem;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.2s ease, color 0.2s ease;
+}
+
+nav ul li a:hover {
+    color: #00e5ff;
+    border-bottom-color: #00e5ff;
+}
+
+section {
+    max-width: 800px;
+    margin: 0 auto;  /**centraliza o bloco na pagina */
+    padding: 1rem 0;
+}
+
+figure {
+    margin: 1.5rem 0;
+    text-align: center;
+}
+
+figure img {
+    max-width: 100%; /**imagem nunca ultrapassa o container*/
+    border-radius: 10px; /**cantos arrendodados */
+    box-shadow: 0 8px 24px rgba(0, 229, 255, 0.15); /**brilho sutil neon */
+}
+
+figcaption {
+    margin-top: 0.6rem;
+    font-size: 0.9rem;
+    color: #9a9ab0;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse; /**junta as bordas das celulas em uma so linha */
+    margin-top: 1rem;
+}
+
+th, td {
+    text-align: left;
+    padding: 0.75rem 1rem;
+    border: 1px solid #2a2a40;
+}
+th {
+    background-color: #1c1c2e;
+    color: #00e5ff;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #12121e;
+}
+
+tbody tr:hover {
+    background-color: #1c1c2e;
+}
+
+fieldset {
+    border: 1px solid #2a2a40;
+    border-radius: 10px;
+    padding: 1.5rem;
+}
+
+legend {
+    color: #00e5ff;
+    font-weight: 700;
+    padding: 0 0.5rem;
+}
+
+label {
+    font-weight: 600;
+    color: #e6e6f0;
+}
+
+input[type="text"],
+input[type="email"],
+select {
+    width: 100%;
+    max-width: 320px;
+    margin-top: 0.4rem;
+    padding: 0.6rem 0.8rem;
+    background-color: #12121e;
+    border: 1px solid #2a2a40;
+    border-radius: 6px;
+    color: #e6e6f0;
+    font-size: 1rem;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+select:focus {
+    outline: none;
+    border-color: #00e5ff;
+}
+
+.btn-comprar {
+    background-color: #b026ff;
+    color: #ffffff;
+    border: none;
+    padding: 0.8rem 1.6rem;
+    font-size: 1rem;
+    font-weight: 700;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.15s ease;
+}
+
+.btn-comprar:hover {
+    background-color: #00e5ff;
+    color: #0d0d17;
+}
+
+.btn-comprar:active {
+    transform: scale(0.97);
+}
+
+footer {
+    text-align: center;
+    color: #6f6f85;
+    font-size: 0.85rem;
+    margin-top: 2rem;
+}
+footer a {
+    color: #00e5ff;
+    text-decoration: none;
+}
+footer a:hover {
+    text-decoration: underline;
+}

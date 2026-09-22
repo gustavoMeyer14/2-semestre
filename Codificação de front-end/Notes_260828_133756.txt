@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title> Teclado Gamer CyberPulse - Oferta Exclusiva</title>
+</head>
+<body>
+
+<!--Cabeçalho e Menu Principal-->
+
+<header>
+<h1> CyberPulse Hardware</h1>
+<p><em> Equipamentos de alta performace para devs e gamers </em></p>
+
+<!--Criando menus-->
+
+<nav>
+<ul>
+<li><a href="#apresentação"> Sobre o produto </a></li>
+<li><a href="#especificação"> Especificação </a></li>
+<li><a href="#compra"> Garantir o Meu </a></li>
+<li><a href="#detalhes.html"><strong> Ver Detalhes Técnicos Completos</strong> </a></li>
+</ul>
+</nav>
+</header>
+<hr>
+<main>
+
+<!--Seção 1 de apresentação-->
+
+<section id = "apresentação">
+<h2> Teclado Mecânico CyberPulse RGB Pro</h2>
+<p> Aumente seu nível nos jogos e no código com o Teclado mais rápido da categoria. Digitação precisa, reposta instantânea e iluminação custumizável</p>
+<figure>
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDIkiNKVG_Q_4f-aXzK1LaTpxhWD1BRCzD5zQcEDh_2A&s=10">
+<figcaption>
+Teclado CyberPulse RGB em ação no setup
+</figcaption>
+</figure>
+<p> Preço de lançamento: <del> R 299,00 </strong> em atá 6x sem juros !!!</p>
+
+<!--Link para direcionar para 2ª tela(página)-->
+
+<p>
+<a href="detalhes.html"><strong> Clique aqui para ler a informação detalhada, manual e teste de Switch</strong></a>
+</p>
+</section>
+<hr>
+
+<!--Seção 2: tabela de resuma-->
+
+<section id="especificação">
+<h2> Resumo das Especificações</h2>
+<table border="1">
+<thead>
+<tr>
+<th> Recurso</th>
+<th> Tecnologia</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td> Tipo de Switch</td>
+<td> Teclado Red (Silencioso e Rápido)</td>
+</tr>
+<tr>
+<td> Conexão</td>
+<td> USB-C / Bluetooth 5.0</td>
+</tr>
+<tr>
+<td> Layout</td>
+<td> ABNT2 (Com Ç)</td>
+</tr>
+</tbody>
+</table>
+</section>
+<hr>
+
+<!--Seção 3 - Formulário de venda (Garanta o seu)-->
+
+<section id = "comprar">
+<h2> Garanta o seu com Desconto !</h2>
+<form action="#" method="post">
+<fieldset>
+<legend> Dados para compra</legend>
+<p>
+<label for="nome"> Nome Completo: </label>
+<input type="text" id="nome" name="nome"
+placeholder=" Digite seu Nome Completo">
+</p>
+<p>
+<label for="email"> E-mail para envio: </label>
+<input type="email" id="email" name="email"
+placeholder=" seuemail@email.com">
+</p>
+<p>
+<label for="cor"> Escolha a cor do Teclado:</label><br>
+<select id="cor" name="cor">
+<option value="black"> Preto Matter</option>
+<option value="white"> Branco Cyber</option>
+<option value="red"> Vermelho Automotivo</option>
+</select>
+ </p>
+<p>
+<button type="submit">
+Confirmar seu Pedido
+</button>
+</p>
+</fieldset>
+</form>
+</section>
+ </main>
+<hr>
+<!--Rodapé da página-->
+
+<footer>
+<p>© 2026 CyberPulse Hardware, Todos os direitos reservados.</p>
+<p><a href="#apresentação"> Voltar ao topo</a></p>
+</footer>
+</body>
+</html>

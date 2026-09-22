@@ -1,0 +1,142 @@
+@charset "UTF-8";
+
+/**responsividade da página */
+
+.responsivo1 {
+    width: 500px;
+    margin: 0 auto;
+    height: 500px;
+}
+
+.responsivo2 {
+    width: 1000px;
+    margin: 0 auto;
+    height: 500px;
+}
+
+.responsivo3{
+    width: 1350px;
+    margin: 0 auto;
+    height: 500px;
+}
+
+/**Estilo da tela inicial. */
+
+body {
+    margin: 0 auto;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+header {
+    height: 170px;
+    background-color: #003b48;
+    box-shadow: 0 8px 25px #12121e;
+}
+header img {
+    float: left;
+    height: 150px;
+    width: 150px;
+    margin: 10px;
+}
+
+header h1 {
+    float: left;
+    margin: 50px 0 0 30px;
+    font-size: 60px;
+    color: #ffffff;
+}
+
+/**Configurando o menu de opções */
+
+nav {
+    clear: both; /**Não deixa o menu sobrepor o conteúdo. */
+    width: 80%;
+    margin: 0px auto;
+    height: 55px;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    text-align: center;
+}
+
+nav .opcao {
+    float: left;
+    width: 30%;
+    background-color: #425f8b;
+    padding: 10px 0;
+    margin: 0 1%;
+    margin-top: 10px;
+    font-size: 26px;
+    border-radius: 10px;
+}
+
+nav .opcao:hover {
+    transition: 0.5s;
+    scale: 110%;
+    background-color: #4a789e;
+    box-shadow: 0 8px 25px #12121e;
+}
+
+section {
+    clear: both;
+    min-height: 360px;
+    width: 100%;
+    margin-top: 0px;
+}
+
+section #Topo {
+    width: 1050px;
+    margin: 0px auto;
+    height: 260px;
+}
+
+.arcondicionado {
+    height: 200px;
+    width: 200px;
+}
+
+.direito {
+    float: right;
+}
+
+.esquerdo {
+    float: left;
+}
+
+section #titulos {
+    float: left;
+    height: 250px;
+    width: 650px;
+    margin: 0px auto;
+}
+
+h2 {
+    text-align: center;
+    margin-top: 0px;
+    margin-bottom: 2 0px;
+    font-size: 40px;
+}
+
+h3 {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 20px;
+}
+
+section p {
+    clear: both;
+    text-align: center;
+    margin: 10px 80px;
+}
+
+/**Rodapé */
+
+footer {
+    background-color: #005f89;
+    color: #ffffff;
+    padding: 20px;
+    text-align: center;
+    flex-shrink: 0;
+    margin-top: 45px;
+}
