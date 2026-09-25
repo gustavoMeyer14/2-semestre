@@ -29,7 +29,7 @@ body {
 header {
     height: 170px;
     background-color: #003b48;
-    box-shadow: 0 8px 25px #12121e;
+    box-shadow: 0 0.5px 25px #12121e;
 }
 header img {
     float: left;
@@ -63,16 +63,16 @@ nav a {
 nav .opcao {
     float: left;
     width: 30%;
-    background-color: #425f8b;
+    background-color: #374f74;
     padding: 10px 0;
     margin: 0 1%;
     margin-top: 10px;
     font-size: 26px;
-    border-radius: 10px;
+    border-radius: 20px;
 }
 
 nav .opcao:hover {
-    transition: 0.5s;
+    transition: 0.2s;
     scale: 110%;
     background-color: #4a789e;
     box-shadow: 0 8px 25px #12121e;
@@ -133,10 +133,51 @@ section p {
 /**Rodapé */
 
 footer {
-    background-color: #005f89;
+    background-color: #003b48;
     color: #ffffff;
     padding: 20px;
     text-align: center;
     flex-shrink: 0;
     margin-top: 45px;
+}
+
+.tabelaProdutos {
+    margin: 10px auto;
+    text-align: center;
+}
+
+.tituloTabela {
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    color: #fff;
+    padding: 5px;
+    border: transparent;
+}
+
+.imagemtb {
+    height: 40px;
+    width: 50px;
+}
+
+tr, td, th {
+    border: 1px solid #B0C4DE;
+    padding: 5px;
+}
+
+tr, td {
+    font-size: 14px;
+}
+
+tr:nth-child(even) {
+    background-color: #c0c5b0;
+}
+
+tr:nth-child(odd) {
+    background-color: #8ee0a8;
+}
+
+.imgprodutos {
+    height: 300px;
+    width: 500px;
 }
