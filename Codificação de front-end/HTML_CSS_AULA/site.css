@@ -29,7 +29,6 @@ body {
 header {
     height: 170px;
     background-color: #003b48;
-    box-shadow: 0 0.5px 25px #12121e;
 }
 header img {
     float: left;
@@ -63,19 +62,17 @@ nav a {
 nav .opcao {
     float: left;
     width: 30%;
-    background-color: #374f74;
+    background-color: #425f8b;
     padding: 10px 0;
     margin: 0 1%;
-    margin-top: 10px;
     font-size: 26px;
-    border-radius: 20px;
+
 }
 
 nav .opcao:hover {
     transition: 0.2s;
     scale: 110%;
     background-color: #4a789e;
-    box-shadow: 0 8px 25px #12121e;
 }
 
 section {
@@ -133,12 +130,12 @@ section p {
 /**Rodapé */
 
 footer {
-    background-color: #003b48;
+    background-color: #005f89;
     color: #ffffff;
     padding: 20px;
     text-align: center;
     flex-shrink: 0;
-    margin-top: 45px;
+    margin-top: 3.2%;
 }
 
 .tabelaProdutos {
