@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de cadastro de funcionário</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        h1 {
+            font-size: 60px;
+            text-align: center;
+            padding: 10px;
+        }
+
+        header {
+            background-color: #cacaca;
+            width: 1050px;
+            height: 100px;
+            margin: auto;
+            border-radius: 20px;
+            box-shadow: 0 10px 25px #2c2c2c;
+        }
+
+        p {
+            font-size: 20px;
+            text-align: center;
+        }
+
+        .form {
+            margin: 10px auto;
+            width: 750px;
+            height: 500px;
+            border-radius: 20px;
+            text-align: left;
+        }
+
+        .form input {
+            width: 750px;
+            height: 25px;
+            border-radius: 20px;
+            border-color: #7c7c7c;
+            border-style: solid;
+        }
+        
+        .form label {
+            padding: 10px
+        }
+
+        .form input, label {
+            resize: none;
+        }
+
+        textarea {
+            width: 750px;
+            height: 50px;
+            border-radius: 10px;
+            resize: none;
+            border-color: #7c7c7c;  
+        }
+
+        ::placeholder {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        select {
+            width: 750px;
+            height: 30px;
+            font-size: 14px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            border-radius: 20px;
+            cursor: pointer;
+            border: 2px solid #7c7c7c;
+            box-sizing: border-box;
+        }
+
+        .limpar {
+            margin-top: 10px;
+            width: 100px;
+            height: 50px;
+            border-radius: 20px;
+            border-color: #7c7c7c;
+            border-style: solid;
+            font-size: 20px;
+            cursor: pointer;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .limpar:hover {
+            transition: 0.2s ease-in-out;
+            scale: 110%;
+            box-shadow: 0 10px 25px #ff0000;
+            border-color: #ff0000;
+        }
+
+        .enviar {
+            margin-top: 10px;
+            float: right;
+            width: 100px;
+            height: 50px;
+            border-radius: 20px;
+            border-color: #7c7c7c;
+            border-style: solid;
+            font-size: 20px;
+            cursor: pointer;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .enviar:hover {
+            transition: 0.2s ease-in-out;
+            scale: 110%;
+            box-shadow: 0 10px 25px #15ff00;
+            border-color: #15ff00;
+        }
+
+    </style>
+</head>
+<body>
+    <header id="topo">
+        <h1>Sistema de cadastro de funcionário</h1>
+    </header>
+    <p>Conforme o sistema, o formulário para cadastro de funcionário estará disponivel abaixo.</p>
+    <form name="CadastroFuncionario" method="post">
+        <fieldset class="form">
+            <legend>Formulário de cadastro</legend>
+            <label for="nome">Nome Completo: </label>
+            <input type="text" name="nome" id="nome" placeholder="Complete com o nome aqui.">
+
+            <label for="fone">Telefone: </label>
+            <input type="text" name="telefone" id="fone" placeholder="Complete com o telefone do funcionário.">
+
+            <label for="email">Email: </label>
+            <input type="email" name="email" id="email" placeholder="Complete com o email do funcionário.">
+
+            <label for="data_nascimento">Data de nascimento do funcionário: </label>
+            <input type="date" name="data_nascimento" id="data_nascimento">
+
+            <label for="numero_identificação">Número de identificação do funcionário: </label>
+            <input type="number" name="numero_identificação" id="numero_identificação" placeholder="Complete com o número de identificação do usuário.">
+
+            <label for="especialidades">Especialidade do funcionário: </label>
+            <textarea placeholder="Complete com a especialidade do funcionário."></textarea>
+
+            <label for="departamento">Departamento:</label>
+            <select id="departamento" name="departamento">
+                <option value="" disabled selected>Selecione o departamento</option>
+                <option value="ti">Tecnologia da Informação</option>
+                <option value="rh">Recursos Humanos</option>
+                <option value="financeiro">Financeiro</option>
+                <option value="marketing">Marketing</option>
+            </select>
+            <button type="reset" class="limpar">Limpar</button> <button type="reset" class="enviar">Enviar</button>
+        </fieldset>
+    </form>
+</body>
+</html>
