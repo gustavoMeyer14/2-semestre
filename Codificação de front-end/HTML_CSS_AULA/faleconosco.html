@@ -24,5 +24,53 @@
             </a>
         </nav>
     </header>
+    
+    <section>
+        <div id="topo" align="center">
+            <img src="Imagens/arcondicionado.png" alt="Imagem do Ar-codicionado" class="topo2">
+        </div>
+        <h2>
+            Fale Conosco!
+        </h2>
+        <p>
+            Ficou com alguma dúvida? Preencha este formulário abaixo e entraremos em contato o mais breve possível!
+        </p>
+
+        <form name="frnfaleconosco" method="post" action="#" onsubmit="return validarFaleConosoco()">
+            <fieldset class="faleconosco">
+                <legend>Dados pessoais: </legend>
+                <label for="nome">Nome Completo: </label>
+                <input type="text" name="txtnome" id="nome" placeholder="Digite seu nome completo">
+                
+                <label for="fone">Telefone: </label>
+                <input type="text" name="txtfone" id="fone" placeholder="Digite seu telefone">
+
+                <label for="email">Email: </label>
+                <input type="email" name="txtemail" id="email" placeholder="Digite seu email">
+
+                <label for="data_nascimento">Data de nascimento: </label>
+                <input type="date" name="txtdata_nascimento" id="data_nascimento">
+            </fieldset>
+            <fieldset class="faleconosco">
+                <legend>Motivo do contato</legend>
+                <label for="motivo"> Motivo: </label>
+                <select name="selmotivo" id="motivo" onchange="verificaMotivo(this.value)">
+                    <option value="  ">Escolha </option>
+                    <option value="RE">Reclamação </option>
+                    <option value="SU">Sugestão </option>
+                    <option value="PR">Informações do Produto</option>
+                </select>
+                <div id="opcaoProduto"></div>
+                <label for="comentario">Comentário</label>
+                <textarea name="txtcomentario" id="comentario"></textarea>
+                <button type="reset" onclick="verificaMotivo(null)">Limpar</button><button type="reset">Enviar</button>
+            </fieldset>
+        </form>
+    </section>
+
+    <footer>
+        Copyright &copy;
+        Artech Ar-condicionados e Aquecedores 2026
+    </footer>
 </body>
 </html>
