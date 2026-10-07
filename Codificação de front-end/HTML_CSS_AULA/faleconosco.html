@@ -7,6 +7,7 @@
     <meta name="author" content="Artech Ar-codicionado Ltda"> <!--Autor do site-->
     <title>ARTECH  AR-CONDICIONADOS E AQUECEDORES</title>
     <link rel="stylesheet" type="text/css" href="site.css">
+    <script src="site.js"></script>
 </head>
 <body>
     <header>
@@ -36,14 +37,14 @@
             Ficou com alguma dúvida? Preencha este formulário abaixo e entraremos em contato o mais breve possível!
         </p>
 
-        <form name="frnfaleconosco" method="post" action="#" onsubmit="return validarFaleConosoco()">
+        <form name="frmfaleconosco" method="post" action="#" onsubmit="return validaFaleConosco()">
             <fieldset class="faleconosco">
                 <legend>Dados pessoais: </legend>
                 <label for="nome">Nome Completo: </label>
                 <input type="text" name="txtnome" id="nome" placeholder="Digite seu nome completo">
                 
                 <label for="fone">Telefone: </label>
-                <input type="text" name="txtfone" id="fone" placeholder="Digite seu telefone">
+                <input type="text" name="txtfone" id="fone" placeholder="Ex.: (47)99999-8888">
 
                 <label for="email">Email: </label>
                 <input type="email" name="txtemail" id="email" placeholder="Digite seu email">
@@ -63,7 +64,7 @@
                 <div id="opcaoProduto"></div>
                 <label for="comentario">Comentário</label>
                 <textarea name="txtcomentario" id="comentario"></textarea>
-                <button type="reset" onclick="verificaMotivo(null)">Limpar</button><button type="reset">Enviar</button>
+                <button type="reset" onclick="verificaMotivo(null)">Limpar</button><button type="submit">Enviar</button>
             </fieldset>
         </form>
     </section>
