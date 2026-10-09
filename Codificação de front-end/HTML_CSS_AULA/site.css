@@ -61,7 +61,7 @@ nav a {
 
 nav .opcao {
     float: left;
-    width: 30%;
+    width: 23%;
     background-color: #425f8b;
     padding: 10px 0;
     margin: 0 1%;
@@ -202,6 +202,51 @@ tr:nth-child(odd) {
     background-color: #b1ccf5;
     font-weight: bold;
     font-size: 16px;
+}
+
+.newsletter {
+    width: 300px;
+    margin: 0px auto;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.newsletter input, .newsletter textarea, .newsletter select {
+    margin: 5px auto;
+    width: 100%;
+    padding: 5px 0;
+}
+
+.newsletter textarea {
+    height: 100px;
+    resize: none;
+}
+
+.newsletter button {
+    width: 30%;
+    margin: 0 10%;
+    background-color: #b1ccf5;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.newsletter input[type="checkbox"] {
+    width: auto;           
+    display: inline-block;       
+    vertical-align: middle;      
+    margin-right: 8px;         
+    cursor: pointer;              
+}
+
+.grupo-checkbox {
+    margin: 10px 0;
+}
+
+.grupo-checkbox label {
+    font-weight: normal;       
+    display: block;              
+    margin-bottom: 6px;
+    cursor: pointer;
 }
 
 .modal {

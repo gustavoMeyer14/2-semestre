@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Keywords" content="Ar-condicionado,Inverter,Refrigerador,Split,Aquecedor,Artech"> <!--Palavras chave-->
+    <meta name="author" content="Artech Ar-codicionado Ltda"> <!--Autor do site-->
+    <title>ARTECH  AR-CONDICIONADOS E AQUECEDORES</title>
+    <link rel="stylesheet" type="text/css" href="site.css">
+    <script src="site.js"></script>
+</head>
+<body>
+    <header>
+        <img src="Imagens/logo.png" alt="Logo da Artech" align="center">
+        <h1> Artech - Ar-condicionado e Aquecedores</h1>
+        <nav>
+            <a href="index.html">
+                <div class="opcao"> Inicio</div>
+            </a>
+            <a href="produtos.html">
+                <div class="opcao"> Produtos</div>
+            </a>
+            <a href="faleconosco.html">
+                <div class="opcao"> fale Conosco</div>
+            </a>
+            <a href="newsletter.html">
+                <div class="opcao"> Newsletter</div>
+            </a>
+        </nav>
+    </header>
+    <section>
+        <div id="topo" align="center">
+            <img src="Imagens/arcondicionado.png" alt="Imagem do Ar-codicionado" class="topo2">
+        </div>
+        <div>
+            <h2>Newsletter</h3>
+            <p>Fique por dentro de todas as novidades e promoções exclusivas da Artech.</p>
+        </div>
+        <form name="frmnewsletter" method="post" action="#" onsubmit="return validaNewsletter()">
+            <fieldset class="newsletter">
+                <legend>Dados para contato</legend>
+
+                <label for="nome">Nome Completo: </label>
+                <input type="text" name="txtnome" id="nome" placeholder="Digite seu nome completo">
+
+                <label for="email">Email: </label>
+                <input type="email" name="txtemail" id="email" placeholder="Digite seu email">
+
+                <label>Interesses:</label>
+                    <div class="grupo-checkbox">
+                        <label>
+                            <input type="checkbox" name="chkinteresse" value="Split"> Ar Condicionado Split
+                        </label>
+                        <label>
+                            <input type="checkbox" name="chkinteresse" value="Janela"> Ar Condicionado Janela
+                        </label>
+                        <label>
+                            <input type="checkbox" name="chkinteresse" value="Aquecedor"> Aquecedor
+                        </label>
+                    </div>
+                <button type="reset">Limpar</button><button type="submit">Assinar</button>
+            </fieldset>
+        </form>
+    </section>
+
+    <footer>Copyright &copy;
+        Artech Ar-condicionados e Aquecedores 2026
+    </footer>
+
+    <div id="modalNewsletter" class="modal">
+        <div class="modal-conteudo">
+            <h2>Confira sua assinatura</h2>
+            <ul id="listaDadosNewsletter"></ul>
+            <div class="modal-botoes">
+                <button type="button" onclick="fechaModalNewsletter()">Corrigir</button>
+                <button type="button" onclick="confirmaNewsletter()">Confirmar</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
