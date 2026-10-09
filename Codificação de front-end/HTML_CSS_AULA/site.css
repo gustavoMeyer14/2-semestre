@@ -204,3 +204,43 @@ tr:nth-child(odd) {
     font-size: 16px;
 }
 
+.modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(134, 134, 134, 0.6);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal.aberto {
+    display: flex;
+}
+
+.modal-conteudo {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 450px;
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+.modal-conteudo ul {
+    list-style: none;
+    padding: 0;
+}
+
+.modal-conteudo li {
+    margin: 8px 0;
+    word-break: break-word;
+}
+
+.modal-botoes {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+    margin-top: 15px;
+}
