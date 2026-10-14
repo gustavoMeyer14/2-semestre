@@ -204,3 +204,88 @@ function confirmaNewsletter() {
     // Submete o formulário da newsletter para o servidor
     document.frmnewsletter.submit();
 }
+
+/** Orçamento
+    Aluno: Gustavo Francisco Meyer */
+
+function validaOrcamento() {
+    var f = document.frmorcamento;
+
+    var nome = f.txtnome.value;
+    var expRegnome = /^[a-zA-ZÀ-ÿ]+(\s+[a-zA-ZÀ-ÿ]+)+$/;
+    if (!expRegnome.test(nome.trim())) {
+        alert("Preencha o campo 'Nome completo' com nome e sobrenome!");
+        f.txtnome.focus();
+        return false;
+    }
+
+    var email = f.txtemail.value;
+    var expRegemail = /^[\w.-]+@[\w-]+(\.[\w-]+)+$/;
+    if (!expRegemail.test(email)) {
+        alert("Preencha o campo 'Email' com um formato válido!");
+        f.txtemail.focus();
+        return false;
+    }
+
+    var cidade = f.txtcidade.value;
+    var expRegcidade = /^[a-zA-ZÀ-ÿ]+$/;
+    if (!expRegcidade.test(cidade)) {
+        alert("Preencha o campo 'Cidade'!");
+        f.txtcidade.focus();
+        return false;
+    }
+
+    var produto = f.selproduto.option;
+    if (produto=="ES"){
+        alert("Selecione uma opção!");
+        f.selproduto.focus();
+        return false;
+    }
+
+    var quantidade = f.numquantidade.value;
+    var expRegquantidade = /^[1-9]+$/;
+    if (expRegquantidade.test(quantidade) <= 0){
+        alert("Digite uma quantidade do produto selecionado!");
+        f.numquantidade.focus();
+        return false;
+    }
+
+    abreModalOrcamento();
+    return false;
+}
+
+function abreModalOrcamento() {
+    var f = document.frmorcamento;
+
+    var produto = f.selproduto.options[f.selproduto.selectedIndex].text;
+
+    var dados = [
+        ["Nome", f.txtnome.value],
+        ["Email", f.txtemail.value],
+        ["Cidade", f.txtcidade.value],
+        ["Produto selecionado", produto],
+        ["Quantidade", f.numquantidade.value],
+    ];
+
+    var lista = document.getElementById("listaDadosOrcamento");
+    lista.innerHTML = "";
+
+    dados.forEach(function (item) {
+        var li = document.createElement("li");
+        var strong = document.createElement("strong");
+        strong.textContent = item[0] + ": ";
+        li.appendChild(strong);
+        li.appendChild(document.createTextNode(item[1]));
+        lista.appendChild(li);
+    });
+
+    document.getElementById("modalOrcamento").classList.add("aberto");
+}
+
+function fechaModalOrcamento() {
+    document.getElementById("modalOrcamento").classList.remove("aberto");
+}
+
+function confirmaOrcamento() {
+    document.frmorcamento.submit();
+}

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Keywords" content="Ar-condicionado,Inverter,Refrigerador,Split,Aquecedor,Artech">
+    <meta name="author" content="Artech Ar-codicionado Ltda">
+    <title>ARTECH AR-CONDICIONADOS E AQUECEDORES</title>
+    <link rel="stylesheet" type="text/css" href="site.css">
+    <script src="site.js"></script>
+    <!--Aluno: Gustavo Francisco Meyer -->
+</head>
+<body>
+    <header>
+        <img src="Imagens/logo.png" alt="Logo da Artech" align="center">
+        <h1> Artech - Ar-condicionado e Aquecedores</h1>
+        <nav>
+            <a href="index.html">
+                <div class="opcao"> Inicio</div>
+            </a>
+            <a href="produtos.html">
+                <div class="opcao"> Produtos</div>
+            </a>
+            <a href="faleconosco.html">
+                <div class="opcao"> fale Conosco</div>
+            </a>
+            <a href="newsletter.html">
+                <div class="opcao"> Newsletter</div>
+            </a>
+            <a href="orcamento.html">
+                <div class="opcao"> orçamento</div>
+            </a>
+        </nav>
+    </header>
+    <section>
+        <div id="topo" align="center">
+            <img src="Imagens/arcondicionado.png" alt="Imagem do Ar-codicionado" class="topo2">
+        </div>
+        <div>
+            <h2>Orçamento</h2>
+            <p>Faça um orçamento aqui!</p>
+        </div>
+        <form name="frmorcamento" method="post" action="#" onsubmit="return validaOrcamento()">
+            <fieldset class="orcamento">
+                <legend>Dados do cliente</legend>
+                <label for="nome">Nome Completo: </label>
+                <input type="text" name="txtnome" id="nome" placeholder="Digite seu nome completo">
+
+                <label for="email">Email: </label>
+                <input type="email" name="txtemail" id="email" placeholder="Digite seu email">
+
+                <label for="cidade">Cidade: </label>
+                <input type="text" name="txtcidade" id="cidade" placeholder="Digite sua cidade">
+            </fieldset>
+            <fieldset class="orcamento">
+                <legend>Dados do produto</legend>
+                <label for="produto">Produto: </label>
+                <select name="selproduto" id="produto" onchange="validaOrcamento()">
+                    <option value="ES">Escolha</option>
+                    <option value="ACS">Ar Condicionado Split</option>
+                    <option value="ACJ">Ar Condicionado Janela</option>
+                    <option value="ACI">Ar Condicionado Inverter</option>
+                    <option value="AQ">Aquecedor</option>
+                </select>
+                <label for="quantidade">Quantidade: </label>
+                <input type="number" name="numquantidade" id="quantidade" placeholder="Digite a quantidade">
+
+                <button type="reset">Limpar</button><button type="submit">Enviar</button>
+            </fieldset>
+        </form>
+    </section>
+    <footer>
+        Copyright &copy;
+        Artech Ar-condicionados e Aquecedores 2026
+    </footer>
+    
+    <div id="modalOrcamento" class="modal">
+        <div class="modal-conteudo">
+            <h2>Confira seu pedido</h2>
+            <ul id="listaDadosOrcamento"></ul>
+            <div class="modal-botoes">
+                <button type="button" onclick="fechaModalOrcamento()">Corrigir</button>
+                <button type="button" onclick="confirmaOrcamento()">Confirmar envio.</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

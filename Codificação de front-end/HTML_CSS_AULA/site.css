@@ -61,7 +61,7 @@ nav a {
 
 nav .opcao {
     float: left;
-    width: 23%;
+    width: 18%;
     background-color: #425f8b;
     padding: 10px 0;
     margin: 0 1%;
@@ -300,4 +300,34 @@ tr:nth-child(odd) {
     gap: 10px;                   /* Cria um espaço de 10px entre os botões */
     justify-content: flex-end;   /* Alinha os botões à direita no canto do modal */
     margin-top: 15px;            /* Espaço entre a lista de dados e os botões */
+}
+
+/**Orçamento
+ * Aluno: Gustavo Francisco Meyer
+ */
+
+.orcamento {
+    width: 300px;
+    margin: 0px auto;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.orcamento input, .orcamento textarea, .orcamento select {
+    margin: 5px auto;   
+    width: 100%;
+    padding: 5px 0;
+}
+
+.orcamento textarea {
+    height: 100px;
+    resize: none;
+}
+
+.orcamento button {
+    width: 30%;
+    margin: 0 10%;
+    background-color: #b1ccf5;
+    font-weight: bold;
+    font-size: 16px;
 }
