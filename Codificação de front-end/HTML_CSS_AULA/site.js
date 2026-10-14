@@ -105,17 +105,26 @@ function confirmaEnvio() {
 }
 
 function validaNewsletter() {
+    // Referência direta ao formulário da newsletter pelo nome
     var f = document.frmnewsletter;
 
+    // Captura o valor do nome do usuário
     var nome = f.txtnome.value;
+    
+    // Expressão regular: exije pelo menos duas palavras (nome + sobrenome)
     var expRegnome = /^[a-zA-ZÀ-ÿ]+(\s+[a-zA-ZÀ-ÿ]+)+$/;
+    
+    // Valida o nome removendo espaços extras nas pontas (.trim())
     if (!expRegnome.test(nome.trim())) {
         alert("Preencha o campo 'Nome completo' com nome e sobrenome!");
         f.txtnome.focus();
         return false;
     }
 
+    // Captura o e-mail digitado
     var email = f.txtemail.value;
+    
+    // Expressão regular: valida a estrutura padrão de e-mail
     var expRegemail = /^[\w.-]+@[\w-]+(\.[\w-]+)+$/;
     if (!expRegemail.test(email)) {
         alert("Preencha o campo 'Email' com um formato válido!");
@@ -123,36 +132,50 @@ function validaNewsletter() {
         return false;
     }
 
+    // Busca todas as checkboxes de interesse que estão marcadas (:checked)
     var interesses = document.querySelectorAll("input[name='chkinteresse']:checked");
+    
+    // Verifica se nenhuma opção foi marcada
     if (interesses.length === 0) {
         alert("Selecione pelo menos um interesse!");
         var primeiroChk = document.querySelector("input[name='chkinteresse']");
-        if (primeiroChk) primeiroChk.focus();
+        if (primeiroChk) primeiroChk.focus(); // Foca no primeiro checkbox
         return false;
     }
 
+    // Se passou em todas as checagens, chama a função para abrir o modal de confirmação da newsletter
     abreModalNewsletter();
-    return false;
+    return false; // Impede a submissão direta do formulário
 }
 
+/**
+ * Prepara e exibe o modal com os dados preenchidos na Newsletter.
+ */
 function abreModalNewsletter() {
     var f = document.frmnewsletter;
 
+    // Seleciona apenas os checkboxes marcados
     var marcados = document.querySelectorAll("input[name='chkinteresse']:checked");
     var listaInteresses = [];
+
+    // Percorre cada elemento marcado e extrai seu valor para o array listaInteresses
     marcados.forEach(function(item) {
         listaInteresses.push(item.value);
     });
 
+    // Cria a estrutura de dados formatada para exibição
     var dados = [
         ["Nome", f.txtnome.value],
         ["Email", f.txtemail.value],
+        // Une todas as opções marcadas com vírgulas (Ex: "Ar condicionado, Aquecedor")
         ["Interesses", listaInteresses.join(", ")]
     ];
 
+    // Pega o elemento <ul> dentro do modal da newsletter
     var lista = document.getElementById("listaDadosNewsletter");
-    lista.innerHTML = "";
+    lista.innerHTML = ""; // Limpa dados anteriores
 
+    // Cria e insere dinamicamente os elementos <li> na lista
     dados.forEach(function (item) {
         var li = document.createElement("li");
         var strong = document.createElement("strong");
@@ -162,13 +185,22 @@ function abreModalNewsletter() {
         lista.appendChild(li);
     });
 
+    // Torna o modal da newsletter visível adicionando a classe 'aberto'
     document.getElementById("modalNewsletter").classList.add("aberto");
 }
 
+/**
+ * Oculta o modal da Newsletter.
+ */
 function fechaModalNewsletter() {
+    // Remove a classe 'aberto' do modal da newsletter
     document.getElementById("modalNewsletter").classList.remove("aberto");
 }
 
+/**
+ * Envia o formulário da Newsletter.
+ */
 function confirmaNewsletter() {
+    // Submete o formulário da newsletter para o servidor
     document.frmnewsletter.submit();
 }

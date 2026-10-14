@@ -205,87 +205,99 @@ tr:nth-child(odd) {
 }
 
 .newsletter {
-    width: 300px;
-    margin: 0px auto;
-    font-weight: bold;
-    margin-bottom: 10px;
+    width: 300px;             /* Define uma largura fixa de 300px para o formulário */
+    margin: 0px auto;         /* Centraliza o formulário horizontalmente na página */
+    font-weight: bold;        /* Define o texto dos rótulos em negrito */
+    margin-bottom: 10px;      /* Espaçamento inferior em relação a outros elementos */
 }
 
+/* Campos de entrada genéricos dentro da newsletter (input, textarea, select) */
 .newsletter input, .newsletter textarea, .newsletter select {
-    margin: 5px auto;
-    width: 100%;
-    padding: 5px 0;
+    margin: 5px auto;         /* Espaçamento acima e abaixo de cada campo */
+    width: 100%;              /* Faz com que os campos ocupem toda a largura do campo pai (300px) */
+    padding: 5px 0;           /* Espaçamento interno na parte superior e inferior do texto */
 }
 
+/* Estilo para áreas de texto (caso existam) */
 .newsletter textarea {
-    height: 100px;
-    resize: none;
+    height: 100px;            /* Altura fixa de 100px */
+    resize: none;             /* Impede que o utilizador redimensione o campo de texto */
 }
 
+/* Botões do formulário ("Limpar" e "Assinar") */
 .newsletter button {
-    width: 30%;
-    margin: 0 10%;
-    background-color: #b1ccf5;
-    font-weight: bold;
-    font-size: 16px;
+    width: 30%;               /* Cada botão ocupa 30% da largura do formulário */
+    margin: 0 10%;            /* Adiciona margens laterais de 10% para espaçar os botões entre si */
+    background-color: #b1ccf5;/* Cor de fundo azul claro */
+    font-weight: bold;        /* Texto do botão em negrito */
+    font-size: 16px;          /* Tamanho da fonte dos botões */
 }
 
+/* Sobrescreve a regra geral para os campos do tipo checkbox */
 .newsletter input[type="checkbox"] {
-    width: auto;           
-    display: inline-block;       
-    vertical-align: middle;      
-    margin-right: 8px;         
-    cursor: pointer;              
+    width: auto;              /* Remove o width: 100% para a caixa não ocupar a linha inteira */
+    display: inline-block;    /* Exibe o checkbox na mesma linha do texto do rótulo */
+    vertical-align: middle;   /* Alinha verticalmente a caixa de seleção com o texto */
+    margin-right: 8px;        /* Dá um espaço de 8px entre a caixa de seleção e o texto */
+    cursor: pointer;          /* Altera o ponteiro do rato para 'mãozinha' ao passar por cima */
 }
 
+/* Contentor que agrupa as opções de checkbox */
 .grupo-checkbox {
-    margin: 10px 0;
+    margin: 10px 0;           /* Espaçamento de 10px acima e abaixo do grupo de opções */
 }
 
+/* Rótulos das opções de checkbox */
 .grupo-checkbox label {
-    font-weight: normal;       
-    display: block;              
-    margin-bottom: 6px;
-    cursor: pointer;
+    font-weight: normal;      /* Retira o negrito dos rótulos das opções individuais */
+    display: block;           /* Faz com que cada opção fique numa linha própria (empilhadas) */
+    margin-bottom: 6px;       /* Espaçamento inferior entre cada opção */
+    cursor: pointer;          /* Altera o ponteiro para 'mãozinha' ao passar sobre a área da opção */
 }
 
+/* Camada escura de fundo (overlay) que cobre a tela inteira */
 .modal {
-    display: none;
-    position: fixed;
-    inset: 0;
-    background: rgba(134, 134, 134, 0.6);
-    z-index: 1000;
-    justify-content: center;
-    align-items: center;
+    display: none;                /* Por padrão, mantém o modal oculto */
+    position: fixed;             /* Fixa o modal na tela, acompanhando a rolagem */
+    inset: 0;                    /* Atalho para top: 0, right: 0, bottom: 0, left: 0 (cobre toda a janela) */
+    background: rgba(134, 134, 134, 0.6); /* Cor de fundo cinza semitransparente (opacidade de 60%) */
+    z-index: 1000;               /* Garante que o modal fique acima de todos os outros elementos do site */
+    justify-content: center;     /* Centraliza o caixa do modal horizontalmente */
+    align-items: center;         /* Centraliza o caixa do modal verticalmente */
 }
 
+/* Classe adicionada via JavaScript para exibir o modal */
 .modal.aberto {
-    display: flex;
+    display: flex;               /* Altera para flex, ativando a exibição e o alinhamento do conteúdo */
 }
 
+/* Caixa branca interna que contém as informações do modal */
 .modal-conteudo {
-    background: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    width: 90%;
-    max-width: 450px;
-    max-height: 90vh;
-    overflow-y: auto;
+    background: #fff;            /* Cor de fundo branca */
+    padding: 20px;               /* Espaçamento interno em volta do conteúdo */
+    border-radius: 8px;          /* Arredonda os cantos da caixa */
+    width: 90%;                  /* Define a largura inicial como 90% da tela (para ser responsivo em celulares) */
+    max-width: 450px;            /* Limita a largura máxima para 450px em telas maiores */
+    max-height: 90vh;            /* Limita a altura máxima a 90% da altura da janela visível */
+    overflow-y: auto;            /* Adiciona uma barra de rolagem vertical caso o conteúdo exceda a altura máxima */
 }
 
+/* Estilização da lista de dados exibida dentro do modal */
 .modal-conteudo ul {
-    list-style: none;
-    padding: 0;
+    list-style: none;            /* Remove as marcadores/bolinhas padrão da lista <ul> */
+    padding: 0;                  /* Remove o espaçamento/recuo esquerdo padrão da lista */
 }
 
+/* Estilização de cada item de dados dentro da lista */
 .modal-conteudo li {
-    margin: 8px 0;
-    word-break: break-word;
+    margin: 8px 0;               /* Espaçamento acima e abaixo de cada item da lista */
+    word-break: break-word;      /* Força a quebra de palavras muito longas (como e-mails) para não estourar a caixa */
 }
 
+/* Área reservada para os botões de ação (Confirmar / Cancelar / Fechar) */
 .modal-botoes {
-    display: flex;
-    gap: 10px;
-    justify-content: flex-end;
-    margin-top: 15px;
+    display: flex;               /* Utiliza o modelo Flexbox para alinhar os botões em linha */
+    gap: 10px;                   /* Cria um espaço de 10px entre os botões */
+    justify-content: flex-end;   /* Alinha os botões à direita no canto do modal */
+    margin-top: 15px;            /* Espaço entre a lista de dados e os botões */
 }

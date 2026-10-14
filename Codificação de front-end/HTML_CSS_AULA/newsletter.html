@@ -1,18 +1,25 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
+    <!-- Define a codificação de caracteres como UTF-8 (suporta acentuação) -->
     <meta charset="UTF-8">
+    <!-- Ajusta a renderização para ser responsiva em dispositivos móveis -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="Keywords" content="Ar-condicionado,Inverter,Refrigerador,Split,Aquecedor,Artech"> <!--Palavras chave-->
-    <meta name="author" content="Artech Ar-codicionado Ltda"> <!--Autor do site-->
-    <title>ARTECH  AR-CONDICIONADOS E AQUECEDORES</title>
+    <meta name="Keywords" content="Ar-condicionado,Inverter,Refrigerador,Split,Aquecedor,Artech">
+    <meta name="author" content="Artech Ar-codicionado Ltda">
+    <title>ARTECH AR-CONDICIONADOS E AQUECEDORES</title>
+    
+    <!-- Importa a folha de estilos CSS principal -->
     <link rel="stylesheet" type="text/css" href="site.css">
+    <!-- Importa o ficheiro JavaScript com as funções de validação e modal -->
     <script src="site.js"></script>
 </head>
 <body>
+    <!-- Cabeçalho do site -->
     <header>
         <img src="Imagens/logo.png" alt="Logo da Artech" align="center">
         <h1> Artech - Ar-condicionado e Aquecedores</h1>
+        <!-- Menu de navegação superior -->
         <nav>
             <a href="index.html">
                 <div class="opcao"> Inicio</div>
@@ -28,51 +35,80 @@
             </a>
         </nav>
     </header>
+
+    <!-- Secção principal da página de Newsletter -->
     <section>
+        <!-- Imagem decorativa de topo -->
         <div id="topo" align="center">
             <img src="Imagens/arcondicionado.png" alt="Imagem do Ar-codicionado" class="topo2">
         </div>
+        
+        <!-- Título e descrição da secção -->
         <div>
-            <h2>Newsletter</h3>
+            <h2>Newsletter</h2>
             <p>Fique por dentro de todas as novidades e promoções exclusivas da Artech.</p>
         </div>
+
+        <!-- Formularío da newsletter:
+             - name="frmnewsletter": Usado pelo JS para aceder ao formulário diretamente.
+             - onsubmit="return validaNewsletter()": Intercepta o envio e chama o JS para validar os dados antes do envio real.
+        -->
         <form name="frmnewsletter" method="post" action="#" onsubmit="return validaNewsletter()">
+            <!-- Agrupador visual dos campos do formulário -->
             <fieldset class="newsletter">
                 <legend>Dados para contato</legend>
 
+                <!-- Campo para digitar o Nome Completo -->
                 <label for="nome">Nome Completo: </label>
                 <input type="text" name="txtnome" id="nome" placeholder="Digite seu nome completo">
 
+                <!-- Campo para digitar o E-mail -->
                 <label for="email">Email: </label>
                 <input type="email" name="txtemail" id="email" placeholder="Digite seu email">
 
+                <!-- Campo de seleção de interesses com checkboxes -->
                 <label>Interesses:</label>
-                    <div class="grupo-checkbox">
-                        <label>
-                            <input type="checkbox" name="chkinteresse" value="Split"> Ar Condicionado Split
-                        </label>
-                        <label>
-                            <input type="checkbox" name="chkinteresse" value="Janela"> Ar Condicionado Janela
-                        </label>
-                        <label>
-                            <input type="checkbox" name="chkinteresse" value="Aquecedor"> Aquecedor
-                        </label>
-                    </div>
-                <button type="reset">Limpar</button><button type="submit">Assinar</button>
+                <div class="grupo-checkbox">
+                    <label>
+                        <!-- Checkbox para a opção Split -->
+                        <input type="checkbox" name="chkinteresse" value="Split"> Ar Condicionado Split
+                    </label>
+                    <label>
+                        <!-- Checkbox para a opção Janela -->
+                        <input type="checkbox" name="chkinteresse" value="Janela"> Ar Condicionado Janela
+                    </label>
+                    <label>
+                        <!-- Checkbox para a opção Aquecedor -->
+                        <input type="checkbox" name="chkinteresse" value="Aquecedor"> Aquecedor
+                    </label>
+                </div>
+
+                <!-- Botão para limpar os campos preenchidos -->
+                <button type="reset">Limpar</button>
+                <!-- Botão para submeter o formulário (dispara a função do onsubmit) -->
+                <button type="submit">Assinar</button>
             </fieldset>
         </form>
     </section>
 
-    <footer>Copyright &copy;
-        Artech Ar-condicionados e Aquecedores 2026
+    <!-- Rodapé da página -->
+    <footer>
+        Copyright &copy; Artech Ar-condicionados e Aquecedores 2026
     </footer>
 
+    <!-- Estrutura do Modal de Confirmação (Oculto por padrão via CSS) -->
     <div id="modalNewsletter" class="modal">
         <div class="modal-conteudo">
             <h2>Confira sua assinatura</h2>
+            
+            <!-- Lista <ul> vazia onde o JS insere os dados dinamicamente (Nome, Email e Interesses) -->
             <ul id="listaDadosNewsletter"></ul>
+            
+            <!-- Botões de ação da janela modal -->
             <div class="modal-botoes">
+                <!-- Botão que fecha o modal sem enviar para o utilizador corrigir -->
                 <button type="button" onclick="fechaModalNewsletter()">Corrigir</button>
+                <!-- Botão que confirma e envia o formulário definitivamente -->
                 <button type="button" onclick="confirmaNewsletter()">Confirmar</button>
             </div>
         </div>
