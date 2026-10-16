@@ -1,3 +1,4 @@
+/**fale conosco */
 function validaFaleConosco() {
     var nome=document.frmfaleconosco.txtnome.value;
     var expRegnome = /^[a-zA-ZÀ-ÿ\s]{3,50}$/;
@@ -103,7 +104,7 @@ function fechaModal() {
 function confirmaEnvio() {
     document.frmfaleconosco.submit();
 }
-
+/**newsletter */
 function validaNewsletter() {
     // Referência direta ao formulário da newsletter pelo nome
     var f = document.frmnewsletter;
@@ -235,16 +236,13 @@ function validaOrcamento() {
         return false;
     }
 
-    var produto = f.selproduto.option;
-    if (produto=="ES"){
+    if (f.selproduto.value == ""){
         alert("Selecione uma opção!");
         f.selproduto.focus();
         return false;
     }
 
-    var quantidade = f.numquantidade.value;
-    var expRegquantidade = /^[1-9]+$/;
-    if (expRegquantidade.test(quantidade) <= 0){
+    if (f.numquantidade.value < 1){
         alert("Digite uma quantidade do produto selecionado!");
         f.numquantidade.focus();
         return false;
@@ -257,13 +255,11 @@ function validaOrcamento() {
 function abreModalOrcamento() {
     var f = document.frmorcamento;
 
-    var produto = f.selproduto.options[f.selproduto.selectedIndex].text;
-
     var dados = [
         ["Nome", f.txtnome.value],
         ["Email", f.txtemail.value],
         ["Cidade", f.txtcidade.value],
-        ["Produto selecionado", produto],
+        ["Produto selecionado", f.selproduto.value],
         ["Quantidade", f.numquantidade.value],
     ];
 
