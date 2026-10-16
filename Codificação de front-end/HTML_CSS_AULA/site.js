@@ -261,6 +261,7 @@ function abreModalOrcamento() {
         ["Cidade", f.txtcidade.value],
         ["Produto selecionado", f.selproduto.value],
         ["Quantidade", f.numquantidade.value],
+        ["Observação", f.txaobs.value || "Sem observações"]
     ];
 
     var lista = document.getElementById("listaDadosOrcamento");
