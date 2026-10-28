@@ -1,0 +1,9 @@
+{
+  "token_gerado": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3OTMxMjI3MDQsImV4cCI6MTc5MzEyNjMwNCwidXNlcl9pZCI6NH0.L8GA4VBskuOTxuDz38AZ4rwv8pAwjU_V-MRA_WL3Zmc",
+  "usuario": {
+    "id": 4,
+    "nome": "Gustavo Francisco Meyer",
+    "email": "gustavo_f_meyer@pokebase.com",
+    "nome_usuario": "gustavoMeyer"
+  }
+}

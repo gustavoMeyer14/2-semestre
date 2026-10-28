@@ -1,0 +1,22 @@
+{
+  "ano": 1999,
+  "total": 1,
+  "dados": [
+    {
+      "id": 2,
+      "titulo": "Naruto",
+      "tipo": "manga",
+      "autor": "Masashi Kishimoto",
+      "editora": "Shueisha",
+      "sinopse": "Naruto Uzumaki é um jovem ninja rejeitado por sua vila que busca reconhecimento e se torna o maior ninja de sua geração. Uma história de amizade, superação e redenção.",
+      "ano_lancamento": 1999,
+      "status": "completo",
+      "volumetoria": "72 volumes",
+      "genero": "Ação, Aventura, Shonen",
+      "classificacao_etaria": "12",
+      "url_capa": "https://upload.wikimedia.org/wikipedia/pt/d/d2/Naruto_vol._01.jpg",
+      "created_at": "2024-01-01T00:00:00.000Z",
+      "updated_at": "2024-01-01T00:00:00.000Z"
+    }
+  ]
+}

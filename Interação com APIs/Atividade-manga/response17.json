@@ -1,0 +1,20 @@
+{
+  "status": 201,
+  "mensagem": "Mangá criado com sucesso",
+  "manga": {
+    "id": 12,
+    "titulo": "Turma da Mônica Especial ",
+    "tipo": "gibi",
+    "autor": "Mauricio de Sousa",
+    "editora": null,
+    "sinopse": "Histórias e aventuras no Bairro do Limoeiro.",
+    "ano_lancamento": 1970,
+    "status": "em_andamento",
+    "volumetoria": "Vários volumes",
+    "genero": "Comédia, Infantil",
+    "classificacao_etaria": "L",
+    "url_capa": "https://example.com/monica.jpg",
+    "created_at": "2026-10-27T19:31:12.666Z",
+    "updated_at": "2026-10-27T19:31:12.666Z"
+  }
+}

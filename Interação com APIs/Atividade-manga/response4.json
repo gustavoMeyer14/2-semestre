@@ -1,0 +1,24 @@
+{
+  "pagina_atual": 1,
+  "tamanho_pagina": 10,
+  "total_registros": 1,
+  "total_paginas": 1,
+  "dados": [
+    {
+      "id": 10,
+      "titulo": "Turma da Mônica",
+      "tipo": "gibi",
+      "autor": "Mauricio de Sousa",
+      "editora": "Editora Mauricio de Sousa",
+      "sinopse": "As aventuras da Mônica, Cebolinha, Cascão, Magali e Franjinha no bairro do Limoeiro. HQ brasileira clássica e querida por todas as gerações.",
+      "ano_lancamento": 1963,
+      "status": "em_andamento",
+      "volumetoria": "Milhares de edições",
+      "genero": "Comédia, Slice of Life",
+      "classificacao_etaria": "L",
+      "url_capa": "https://example.com/covers/monica.jpg",
+      "created_at": "2024-01-01T00:00:00.000Z",
+      "updated_at": "2024-01-01T00:00:00.000Z"
+    }
+  ]
+}

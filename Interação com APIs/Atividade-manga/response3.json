@@ -1,0 +1,38 @@
+{
+  "tipo": "manhwa",
+  "total": 2,
+  "dados": [
+    {
+      "id": 4,
+      "titulo": "Solo Leveling",
+      "tipo": "manhwa",
+      "autor": "Geon-goo Kim / Chugong",
+      "editora": "D&C Media",
+      "sinopse": "Sung Jin-Woo é o caçador mais fraco da humanidade. Após um incidente em uma masmorra, ele ganha a habilidade de subir de nível sozinho, transformando-se no ser mais poderoso do mundo.",
+      "ano_lancamento": 2018,
+      "status": "completo",
+      "volumetoria": "200 capítulos",
+      "genero": "Ação, Aventura, Fantasia",
+      "classificacao_etaria": "16",
+      "url_capa": "https://example.com/covers/solo-leveling.jpg",
+      "created_at": "2024-01-01T00:00:00.000Z",
+      "updated_at": "2024-01-01T00:00:00.000Z"
+    },
+    {
+      "id": 9,
+      "titulo": "Omniscient Reader",
+      "tipo": "manhwa",
+      "autor": "Umi / Sleepy-C",
+      "editora": "Naver",
+      "sinopse": "Kim Dokja é o único leitor de um web novel apocalíptico. Quando o mundo se transforma na história que ele leu, seus conhecimentos se tornam sua maior arma para sobreviver.",
+      "ano_lancamento": 2020,
+      "status": "em_andamento",
+      "volumetoria": "250+ capítulos",
+      "genero": "Ação, Fantasia, Psicológico",
+      "classificacao_etaria": "16",
+      "url_capa": "https://example.com/covers/omniscient-reader.jpg",
+      "created_at": "2024-01-01T00:00:00.000Z",
+      "updated_at": "2024-01-01T00:00:00.000Z"
+    }
+  ]
+}

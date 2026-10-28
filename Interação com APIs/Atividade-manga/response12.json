@@ -1,0 +1,27 @@
+{
+  "por_tipo": [
+    {
+      "tipo": "manga",
+      "total": 8
+    },
+    {
+      "tipo": "manhwa",
+      "total": 2
+    },
+    {
+      "tipo": "gibi",
+      "total": 1
+    }
+  ],
+  "por_status": [
+    {
+      "status": "completo",
+      "total": 7
+    },
+    {
+      "status": "em_andamento",
+      "total": 4
+    }
+  ],
+  "total": 11
+}

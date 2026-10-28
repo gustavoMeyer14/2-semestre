@@ -1,0 +1,22 @@
+{
+  "id": 1,
+  "nome": "Bulbasaur",
+  "numero": 1,
+  "tipo_primario": "grama",
+  "tipo_secundario": "venenoso",
+  "geracao": 1,
+  "regiao": "Kanto",
+  "classe": "normal",
+  "altura": 0.7,
+  "peso": 6.9,
+  "hp": 45,
+  "ataque": 49,
+  "defesa": 49,
+  "ataque_especial": 65,
+  "defesa_especial": 65,
+  "velocidade": 45,
+  "descricao": "Um Pokémon herbívoro que nasce com uma semente nas costas. A semente cresce absorvendo a luz do sol.",
+  "url_sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png",
+  "created_at": "2024-01-01T00:00:00.000Z",
+  "updated_at": "2024-01-01T00:00:00.000Z"
+}

@@ -1,0 +1,20 @@
+{
+  "status": 201,
+  "mensagem": "Mangá criado com sucesso",
+  "manga": {
+    "id": 11,
+    "titulo": "oi",
+    "tipo": "manga",
+    "autor": "eu",
+    "editora": "ela",
+    "sinopse": "eles são os principais.",
+    "ano_lancamento": 2023,
+    "status": "em_andamento",
+    "volumetoria": "16+ volumes",
+    "genero": "Ação, Sobrenatural",
+    "classificacao_etaria": "18",
+    "url_capa": "https://example.com/chainsaw.jpg",
+    "created_at": "2026-10-27T19:30:21.152Z",
+    "updated_at": "2026-10-27T19:30:21.152Z"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "token_gerado": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3OTMxMjkwNDIsImV4cCI6MTc5MzEzMjY0MiwidXNlcl9pZCI6Nn0.H777prkP7VyaxOLT8bFOEiL8TF_zTROnhfv-FmQgeTk",
+  "usuario": {
+    "id": 6,
+    "nome": "Gustavo",
+    "email": "gustavo@mangabase.com",
+    "nome_usuario": "gustavoMeyer"
+  }
+}

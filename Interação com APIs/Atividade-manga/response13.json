@@ -1,0 +1,13 @@
+{
+  "status": 201,
+  "token_gerado": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3OTMxMjg4OTYsImV4cCI6MTc5MzEzMjQ5NiwidXNlcl9pZCI6Nn0.hLT2ziaSlLVEbTwBSjRMGwz4hLCy4ChmkkyFO5nH6BU",
+  "mensagem": "Cadastro realizado com sucesso",
+  "usuario": {
+    "id": 6,
+    "nome": "Gustavo",
+    "email": "gustavo@mangabase.com",
+    "nome_usuario": "gustavoMeyer",
+    "created_at": "2026-10-27T19:21:36.034Z",
+    "updated_at": "2026-10-27T19:21:36.034Z"
+  }
+}

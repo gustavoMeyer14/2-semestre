@@ -1,0 +1,26 @@
+{
+  "status": 201,
+  "mensagem": "Pokémon criado com sucesso",
+  "pokemon": {
+    "id": 78,
+    "nome": "Foguinho",
+    "numero": 100,
+    "tipo_primario": "fogo",
+    "tipo_secundario": null,
+    "geracao": 1,
+    "regiao": "Kanto",
+    "classe": "normal",
+    "altura": null,
+    "peso": null,
+    "hp": null,
+    "ataque": null,
+    "defesa": null,
+    "ataque_especial": null,
+    "defesa_especial": null,
+    "velocidade": null,
+    "descricao": null,
+    "url_sprite": null,
+    "created_at": "2026-10-27T18:18:36.391Z",
+    "updated_at": "2026-10-27T18:18:36.391Z"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "autor": "eiichiro oda",
+  "total": 1,
+  "dados": [
+    {
+      "id": 1,
+      "titulo": "Sem Autor Tipo",
+      "tipo": "manga",
+      "autor": "Eiichiro Oda",
+      "editora": "Shueisha",
+      "sinopse": "Monkey D. Luffy sonha em se tornar o Rei dos Piratas. Para isso, ele precisa encontrar o lendário tesouro One Piece. Com seu chapéu de palha e sua tripulação, Luffy enfrenta inimigos poderosos e explora misteriosos mares.",
+      "ano_lancamento": 1997,
+      "status": "em_andamento",
+      "volumetoria": "107+ volumes",
+      "genero": "Ação, Aventura, Comédia, Shonen",
+      "classificacao_etaria": "12",
+      "url_capa": "https://m.media-amazon.com/images/I/716EGgqzyOL.jpg",
+      "created_at": "2024-01-01T00:00:00.000Z",
+      "updated_at": "2026-10-09T23:13:26.358Z"
+    }
+  ]
+}

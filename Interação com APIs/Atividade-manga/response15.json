@@ -1,0 +1,10 @@
+{
+  "usuario": {
+    "id": 6,
+    "nome": "Gustavo",
+    "email": "gustavo@mangabase.com",
+    "nome_usuario": "gustavoMeyer",
+    "created_at": "2026-10-27T19:21:36.034Z",
+    "updated_at": "2026-10-27T19:21:36.034Z"
+  }
+}

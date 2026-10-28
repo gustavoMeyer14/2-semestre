@@ -1,0 +1,52 @@
+{
+  "pagina_atual": 1,
+  "tamanho_pagina": 10,
+  "total_registros": 2,
+  "total_paginas": 1,
+  "dados": [
+    {
+      "id": 4,
+      "nome": "Pikachu",
+      "numero": 25,
+      "tipo_primario": "eletrico",
+      "tipo_secundario": null,
+      "geracao": 1,
+      "regiao": "Kanto",
+      "classe": "normal",
+      "altura": 0.4,
+      "peso": 6,
+      "hp": 35,
+      "ataque": 55,
+      "defesa": 40,
+      "ataque_especial": 50,
+      "defesa_especial": 50,
+      "velocidade": 90,
+      "descricao": "Quando vários deles se reúnem, sua eletricidade pode causar tempestades. É o Pokémon mais popular do mundo.",
+      "url_sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png",
+      "created_at": "2024-01-01T00:00:00.000Z",
+      "updated_at": "2024-01-01T00:00:00.000Z"
+    },
+    {
+      "id": 60,
+      "nome": "Mimikyu",
+      "numero": 778,
+      "tipo_primario": "fantasma",
+      "tipo_secundario": "fada",
+      "geracao": 7,
+      "regiao": "Alola",
+      "classe": "normal",
+      "altura": 0.2,
+      "peso": 0.7,
+      "hp": 55,
+      "ataque": 90,
+      "defesa": 80,
+      "ataque_especial": 50,
+      "defesa_especial": 105,
+      "velocidade": 96,
+      "descricao": "Veste uma disfarce assustadora para parecer Pikachu e conquistar afeto.",
+      "url_sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/778.png",
+      "created_at": "2024-01-01T00:00:00.000Z",
+      "updated_at": "2024-01-01T00:00:00.000Z"
+    }
+  ]
+}
