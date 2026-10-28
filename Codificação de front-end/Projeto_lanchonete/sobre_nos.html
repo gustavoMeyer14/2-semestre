@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lanchonete do Zé - Início</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+<body>
+    <!-- navbar: barra de menu | navbar-expand-md: aberta no pc, recolhida no celular
+                               | navbar-dark: deixa o texto claro-->
+    <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+        <!-- container: centraliza o conteudo e deixa as margens nas laterais-->
+        <div class="container">
+            <!-- navbar-brand: nome/logo do site-->
+            <a class="navbar-brand" href="index.html">🍔 Lanchonete do Zé</a>
+
+            <!-- navbar-toggler: botão "hamburguer" que aparece só no celular-->
+            <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-taget="#menu" aria-label="Abrir menu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- collapse: parte do menu que esconde/mostra ao clicar no botão-->
+            <div class="collapse navbar-collapse" id="menu">
+                <!-- navbar-nav: lista de links | ms-auto: empurra os links para a direita-->
+                <ul class="navbar-nav ms-auto">
+                    <!-- nav-link: estilo do link | active: destaca a página atual-->
+                    <li class="nav-item"><a class="nav-link" href="index.html">Início</a></li>
+                    <li class="nav-item"><a class="nav-link" href="cardapio.html">Cardápio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contato.html">Contato</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="sobre_nos.html">Sobre nós</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container py-5">
+        <h1 class="text-center mb-4">Sobre nós</h1>
+        <div class="row g-4">
+            <!--quadro 1-->
+            <div class="bg-light p-5 rounded col-12 col-md-6">
+                <p class="lead">Fundada em Joinville no coração do bairro Aventureiro, a "Lanchonete do Zé" começou como um modesto carrinho de pastel e se transformou no ponto de encontro favorito dos moradores da cidade. Com seu famoso X-Salada preparado no capricho e um molho especial verde caseiro, o Seu Zé conquistou gerações de clientes pelo sabor inconfundível e pelo acolhimento sempre sorridente. Hoje, a lanchonete é um verdadeiro patrimônio afetivo da região, unindo tradição, porções generosas e aquele clima familiar inconfundível.</p>
+            </div>
+            <!--quadro 2-->
+            <div class="bg-light p-5 rounded col-12 col-md-6">
+                <h5>Horários</h5>
+                <h6>De segunda a sexta:</h6>
+                <ul class="list-group">
+                    <li class="list-group-item">17:00 - 21:00</li>
+                </ul>
+                <h6>Sabados, domingos e feriados:</h6>
+                <ul class="list-group">
+                    <li class="list-group-item">17:00 - 23:00</li>
+                </ul>
+                <h5>Funcionamento</h5>
+                <ul class="list-group">
+                    <li class="list-group-item">- Entregas</li>
+                </ul>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

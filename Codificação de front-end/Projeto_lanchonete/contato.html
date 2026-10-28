@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lanchonete do Zé - Contato</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+<body>
+    <!-- navbar: barra de menu | navbar-expand-md: aberta no pc, recolhida no celular
+                               | navbar-dark: deixa o texto claro-->
+    <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+        <!-- container: centraliza o conteudo e deixa as margens nas laterais-->
+        <div class="container">
+            <!-- navbar-brand: nome/logo do site-->
+            <a class="navbar-brand" href="index.html">🍔 Lanchonete do Zé</a>
+
+            <!-- navbar-toggler: botão "hamburguer" que aparece só no celular-->
+            <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-taget="#menu" aria-label="Abrir menu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- collapse: parte do menu que esconde/mostra ao clicar no botão-->
+            <div class="collapse navbar-collapse" id="menu">
+                <!-- navbar-nav: lista de links | ms-auto: empurra os links para a direita-->
+                <ul class="navbar-nav ms-auto">
+                    <!-- nav-link: estilo do link | active: destaca a página atual-->
+                    <li class="nav-item"><a class="nav-link" href="index.html">Início</a></li>
+                    <li class="nav-item"><a class="nav-link" href="cardapio.html">Cardápio</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="contato.html">Contato</a></li>
+                    <li class="nav-item"><a class="nav-link" href="sobre_nos.html">Sobre nós</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container py-5">
+        <h2 class="mb-4 text-center">Faça seu pedido ou nos mande uma mensagem</h2>
+        <!-- alert: caixa de aviso | alert-success: verde | d-nome: fica escondida até o JS mostrar-->
+        <div id="aviso" class="alert alert-success d-none" role="alert">
+            Mensagem enviada! Obrigado pelo contato!
+        </div>
+        <!-- row + justify-content-center: centraliza a coluna dentro da linha-->
+        <div class="row justify-content-center">
+            <!--col-md-6: ocupa metade da tela no computador | col-12: tela cheia no celular-->
+            <div class="col-12 col-md-6">
+                <form id="formContato">
+                    <!--mb-3: espaço embaixo de cada campo-->
+                    <div class="mb-3">
+                        <!-- form-label: estilo do rótulo do campo-->
+                        <label for="nome" class="form-label">Seu nome</label>
+                        <!--form-control: estilo do campo de texto (largura total, borda, foco azul)-->
+                        <input type="text" class="form-control" id="nome" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="lanche" class="form-label">Lanche favorito</label>
+                        <!--form-select: estilo da caixa de seleção-->
+                        <select class="form-select" id="lanche">
+                            <option>X-Burguer</option>
+                            <option>Pizza</option>
+                            <option>Suco natural</option>
+                        </select>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="msg" class="form-label">Mensagem</label>
+                        <textarea class="form-control" id="msg" rows="3"></textarea>
+                    </div>
+
+                    <!-- btn btn-warning: botão amarelo | w-100: ocupa toda a largura-->
+                    <button type="submit" class="btn btn-warning w-100">Enviar</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <!-- JS do Bootstrap: necessário para o botão hambúrguer funcionar-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        //ao enviar: impede recarregar a pagina e mostra o alerta (removendo a classe d-none do Bootstrap)
+        document.getElementById('formContato').addEventListener('submit', function (e) {
+            e.preventDefault();
+            document.getElementById('aviso').classList.remove('d-none');
+            this.reset();
+        });
+    </script>
+</body>
+</html>

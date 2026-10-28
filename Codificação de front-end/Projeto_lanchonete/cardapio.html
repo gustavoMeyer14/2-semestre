@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lanchonete do Zé - cardápio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+<body>
+    <!-- navbar: barra de menu | navbar-expand-md: aberta no pc, recolhida no celular
+                               | navbar-dark: deixa o texto claro-->
+    <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+        <!-- container: centraliza o conteudo e deixa as margens nas laterais-->
+        <div class="container">
+            <!-- navbar-brand: nome/logo do site-->
+            <a class="navbar-brand" href="index.html">🍔 Lanchonete do Zé</a>
+
+            <!-- navbar-toggler: botão "hamburguer" que aparece só no celular-->
+            <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-taget="#menu" aria-label="Abrir menu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- collapse: parte do menu que esconde/mostra ao clicar no botão-->
+            <div class="collapse navbar-collapse" id="menu">
+                <!-- navbar-nav: lista de links | ms-auto: empurra os links para a direita-->
+                <ul class="navbar-nav ms-auto">
+                    <!-- nav-link: estilo do link | active: destaca a página atual-->
+                    <li class="nav-item"><a class="nav-link" href="index.html">Início</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="cardapio.html">Cardápio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contato.html">Contato</a></li>
+                    <li class="nav-item"><a class="nav-link" href="sobre_nos.html">Sobre nós</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <main class="container py-5">
+        <!-- mb-4: margem embaixo do título-->
+        <h2 class="mb-4 text-center">Nosso cardápio</h2>
+        
+        <!-- Row: cria uma linha de colunas | g-4: espaço entre os cards-->
+        <div class="row g-4">
+            <!-- col-12: 1 card por linha no celular | col-md-4: 3 cards por linha no tablet/computador-->
+            <div class="col-12 col-md-4">
+                <!-- card: caixinha com borda | h-100: todos os cards com a mesma altura | text-center: centraliza o texto -->
+                <div class="card h-100 text-center">
+                    <!-- card-body: área interna do card, já com espaçamento-->
+                    <div class="card-body">
+                        <!--fs-1: deixa o emoji bem grande-->
+                        <div class="fs-1">🍔</div>
+                        <!-- card-title: titulo do card-->
+                        <h5 class="card-title">X-Burguer</h5>
+                        <!-- card-text: texto do card-->
+                        <p class="card-text">Pão, hambúrguer, queijo e salada.</p>
+                        <!-- badge: etiqueta pequena | bg-sucess: fundo verde | fs-6: tamanho normal-->
+                        <span class="badge bg-success fs-6">R$ 17,99</span>
+                    </div>
+                    <!-- card-footer: rodapé do card-->
+                    <div class="card-footer">
+                        <!-- btn-outline-warning: botão só com borda amarela | w-100: ocupa toda a largura-->
+                        <button class="btn btn-outline-warning w-100">Pedir</button>
+                    </div>
+                </div>
+            </div>
+        
+
+            <!--card 2-->
+            <div class="col-12 col-md-4">
+                <!-- card: caixinha com borda | h-100: todos os cards com a mesma altura | text-center: centraliza o texto -->
+                <div class="card h-100 text-center">
+                    <!-- card-body: área interna do card, já com espaçamento-->
+                    <div class="card-body">
+                        <!--fs-1: deixa o emoji bem grande-->
+                        <div class="fs-1">🍕</div>
+                        <!-- card-title: titulo do card-->
+                        <h5 class="card-title">Pizza</h5>
+                        <!-- card-text: texto do card-->
+                        <p class="card-text">Fatia de mussarela com orégano.</p>
+                        <!-- badge: etiqueta pequena | bg-sucess: fundo verde | fs-6: tamanho normal-->
+                        <span class="badge bg-success fs-6">R$ 11,99</span>
+                    </div>
+                    <!-- card-footer: rodapé do card-->
+                    <div class="card-footer">
+                        <!-- btn-outline-warning: botão só com borda amarela | w-100: ocupa toda a largura-->
+                        <button class="btn btn-outline-warning w-100">Pedir</button>
+                    </div>
+                </div>
+            </div>
+
+            <!--card 3-->
+            <div class="col-12 col-md-4">
+                <!-- card: caixinha com borda | h-100: todos os cards com a mesma altura | text-center: centraliza o texto -->
+                <div class="card h-100 text-center">
+                    <!-- card-body: área interna do card, já com espaçamento-->
+                    <div class="card-body">
+                        <!--fs-1: deixa o emoji bem grande-->
+                        <div class="fs-1">🥤</div>
+                        <!-- card-title: titulo do card-->
+                        <h5 class="card-title">Suco natural</h5>
+                       <!-- card-text: texto do card-->
+                        <p class="card-text">Laranja, limão ou maracujá (400 ml).</p>
+                        <!-- badge: etiqueta pequena | bg-sucess: fundo verde | fs-6: tamanho normal-->
+                        <span class="badge bg-success fs-6">R$ 7,99</span>
+                    </div>
+                    <!-- card-footer: rodapé do card-->
+                    <div class="card-footer">
+                        <!-- btn-outline-warning: botão só com borda amarela | w-100: ocupa toda a largura-->
+                        <button class="btn btn-outline-warning w-100">Pedir</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- JS do Bootstrap: necessário para o botão hambúrguer funcionar-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</body>
+</html>
