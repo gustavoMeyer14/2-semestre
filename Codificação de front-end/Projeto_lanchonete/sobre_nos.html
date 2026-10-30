@@ -7,57 +7,125 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 </head>
 <body>
-    <!-- navbar: barra de menu | navbar-expand-md: aberta no pc, recolhida no celular
-                               | navbar-dark: deixa o texto claro-->
+    <!-- navbar: barra de menu 
+         navbar-expand-md: aberta no PC (≥768px), recolhida no celular 
+         bg-dark: fundo escuro 
+         navbar-dark: texto e ícones claros para contrastar com fundo escuro -->
     <nav class="navbar navbar-expand-md bg-dark navbar-dark">
-        <!-- container: centraliza o conteudo e deixa as margens nas laterais-->
+        <!-- container: centraliza o conteúdo e deixa margens nas laterais -->
         <div class="container">
-            <!-- navbar-brand: nome/logo do site-->
+            <!-- navbar-brand: estilo da marca/nome/logo do site -->
             <a class="navbar-brand" href="index.html">🍔 Lanchonete do Zé</a>
 
-            <!-- navbar-toggler: botão "hamburguer" que aparece só no celular-->
-            <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-taget="#menu" aria-label="Abrir menu">
+            <!-- navbar-toggler: botão "hambúrguer" para abrir o menu no celular -->
+            <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu" aria-label="Abrir menu">
+                <!-- navbar-toggler-icon: ícone visual das 3 listrinhas no botão -->
                 <span class="navbar-toggler-icon"></span>
             </button>
 
-            <!-- collapse: parte do menu que esconde/mostra ao clicar no botão-->
+            <!-- collapse: oculta o conteúdo por padrão em telas pequenas 
+                 navbar-collapse: agrupa os itens retráteis do menu -->
             <div class="collapse navbar-collapse" id="menu">
-                <!-- navbar-nav: lista de links | ms-auto: empurra os links para a direita-->
+                <!-- navbar-nav: lista de links do menu 
+                     ms-auto: (margin-start: auto) empurra a lista para a direita -->
                 <ul class="navbar-nav ms-auto">
-                    <!-- nav-link: estilo do link | active: destaca a página atual-->
+                    <!-- nav-item: item da lista | nav-link: estilo do link -->
                     <li class="nav-item"><a class="nav-link" href="index.html">Início</a></li>
                     <li class="nav-item"><a class="nav-link" href="cardapio.html">Cardápio</a></li>
                     <li class="nav-item"><a class="nav-link" href="contato.html">Contato</a></li>
+                    <!-- active: destaca o link da página atual -->
                     <li class="nav-item"><a class="nav-link active" href="sobre_nos.html">Sobre nós</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
+    <!-- container: centraliza o conteúdo 
+         py-5: padding vertical grande (topo e base) -->
     <main class="container py-5">
+        <!-- text-center: texto centralizado 
+             mb-4: margem inferior média -->
         <h1 class="text-center mb-4">Sobre nós</h1>
-        <div class="row g-4">
-            <!--quadro 1-->
-            <div class="bg-light p-5 rounded col-12 col-md-6">
+        
+        <!-- row: linha do sistema de grid 
+             g-0: zera os espaçamentos (gutters) entre as colunas -->
+        <div class="row g-0">
+
+            <!-- quadro 1: 
+                 bg-light: fundo cinza bem claro 
+                 p-4: padding interno médio nos 4 lados 
+                 rounded: bordas arredondadas 
+                 col-12: ocupa 100% da largura no celular 
+                 col-md-6: ocupa 50% da largura em telas médias ou maiores -->
+            <div class="bg-light p-4 rounded col-12 col-md-6">
+                <!-- lead: destaca o parágrafo aumentando levemente o tamanho do texto -->
                 <p class="lead">Fundada em Joinville no coração do bairro Aventureiro, a "Lanchonete do Zé" começou como um modesto carrinho de pastel e se transformou no ponto de encontro favorito dos moradores da cidade. Com seu famoso X-Salada preparado no capricho e um molho especial verde caseiro, o Seu Zé conquistou gerações de clientes pelo sabor inconfundível e pelo acolhimento sempre sorridente. Hoje, a lanchonete é um verdadeiro patrimônio afetivo da região, unindo tradição, porções generosas e aquele clima familiar inconfundível.</p>
             </div>
-            <!--quadro 2-->
-            <div class="bg-light p-5 rounded col-12 col-md-6">
-                <h5>Horários</h5>
-                <h6>De segunda a sexta:</h6>
+
+            <!-- quadro 2 -->
+            <div class="bg-light p-4 rounded col-12 col-md-6">
+                <h5>Horários de funcionamento</h5>
+                <h6>Segunda:</h6>
+                <!-- list-group: estiliza o grupo de lista como caixas estilizadas -->
+                <ul class="list-group">
+                    <!-- list-group-item: item individual estilizado dentro do grupo -->
+                    <li class="list-group-item">Fechado</li>
+                </ul>
+                <h6>De terça a sexta:</h6>
                 <ul class="list-group">
                     <li class="list-group-item">17:00 - 21:00</li>
                 </ul>
-                <h6>Sabados, domingos e feriados:</h6>
+                <h6>Sábados, domingos e feriados:</h6>
                 <ul class="list-group">
                     <li class="list-group-item">17:00 - 23:00</li>
                 </ul>
-                <h5>Funcionamento</h5>
-                <ul class="list-group">
-                    <li class="list-group-item">- Entregas</li>
-                </ul>
+            </div>
+        </div>
+
+        <!-- Perguntas frequentes -->
+        <h2 class="text-center mb-4">Perguntas frequentes</h2>
+        
+        <!-- accordion: estrutura principal do componente de sanfona/expandível -->
+        <div class="accordion" id="accordionExample">
+            <!-- accordion-item: caixa individual de cada pergunta -->
+             <!-- Item 1-->
+            <div class="accordion-item">
+                <!-- accordion-header: cabeçalho onde fica o botão do accordion -->
+                <h2 class="accordion-header">
+                    <!-- accordion-button: botão clicável com a seta de expandir/recolher -->
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        "Quantas lanchonetes do seu Zé existem em Santa Catarina?"
+                    </button>
+                </h2>
+                <!-- accordion-collapse: container ocultável do conteúdo 
+                     collapse: esconde por padrão 
+                     show: força o item a iniciar aberto/visível -->
+                <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                    <!-- accordion-body: área interna onde fica o texto da resposta -->
+                    <div class="accordion-body">
+                        Atualmente, existem 12 lanchonetes em toda Santa Catarina, localizadas no coração de cada região.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Item 2-->
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <!-- collapsed: indica que o item está fechado por padrão (inverte a seta) -->
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        "Como funciona o sistema de entrega?"
+                    </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        O sistema é bem simples, o frete da entrega é travado em R$ 7,50 para entregas que estão num raio de 50km de uma Lanchonete do Zé, para cima disso, o valor total é de R$15,00 a R$35,00 dependendo da distância total.
+                    </div>
+                </div>
             </div>
         </div>
     </main>
+
+    <!-- JS do Bootstrap: necessário para animações do menu hambúrguer e do accordion -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 </body>
 </html>
